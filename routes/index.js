@@ -35,7 +35,7 @@ conn.once("open", () => {
 //create storage engine
 
 const storage = new GridFsStorage({
-  url: "mongodb://127.0.0.1:27017/instagram",
+  url: process.env.MONGO_URI,
   file: (req, file) => {
     return new Promise((resolve, reject) => {
       crypto.randomBytes(16, (err, buf) => {
