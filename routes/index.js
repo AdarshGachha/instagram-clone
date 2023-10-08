@@ -21,7 +21,7 @@ passport.use(new localStrategy(userModel.authenticate()));
 
 //using grid fs
 
-var conn = mongoose.createConnection("mongodb://127.0.0.1:27017/instagram");
+var conn = mongoose.createConnection(process.env.MONGO_URI);
 let gfs, gridfsBucket;
 conn.once("open", () => {
   gridfsBucket = new mongoose.mongo.GridFSBucket(conn.db, {
