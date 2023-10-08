@@ -3,7 +3,7 @@ var plm = require('passport-local-mongoose');
 
 require("dotenv").config();
 
-// mongoose.connect(process.env.MONGO_URI)// main data base which is online
+mongoose.connect(process.env.MONGO_URI)// main data base which is online
 // mongoose.connect("mongodb://127.0.0.1:27017/instagram"); // this is local data base
 
 var userSchema = mongoose.Schema({
