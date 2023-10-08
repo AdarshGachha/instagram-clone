@@ -130,7 +130,7 @@
                     <% if(loggedinuser.following.indexOf(post.userid.id) !== -1 || loggedinuser.id === post.userid.id){ %>
                         <div id="each-post">
                             <div id="nav-details">
-                                <div onclick="window.location.href = '/profile/<%= post.userid.username %>'" id="userdetail">
+                                <div onclick=`window.location.href = '/profile/<%= post.userid.username %>'` id ="userdetail">
                                     <div id="name-detail">
                                         <img onerror="this.style.display = 'none'" src="/image/<%= post.userid.profileImage %>" alt="">
                                     </div>
